@@ -19,11 +19,3 @@
 apache_module "proxy" do
   conf true
 end
-  template "#{node[:apache][:dir]}/proxy.conf" do
-    source "proxy.conf.erb"
-    owner 'root'
-    group 'root'
-    mode 0644
-    backup false
-  end
-
