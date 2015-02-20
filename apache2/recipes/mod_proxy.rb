@@ -16,7 +16,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
+apache_module "proxy" do
+  conf true
+end
   template "#{node[:apache][:dir]}/proxy.conf" do
     source "proxy.conf.erb"
     owner 'root'
