@@ -1,12 +1,12 @@
 <VirtualHost *:80>
-	DocumentRoot <%= node[:server][:docroot] %>
-	ServerName <%= node[:server][:devserverurl] %>
+	DocumentRoot <%= node[:apache][:docroot] %>
+	ServerName <%= node[:apache][:devserverurl] %>
 	SetEnv APPLICATION_ON development
 	SetEnv LOCALE ru_RU
 	
 	RewriteEngine On
 	
-	 <Directory <%= node[:server][:docroot] %>>
+	 <Directory <%= node[:apache][:docroot] %>>
 		Require all granted
 		
 		AllowOverride None

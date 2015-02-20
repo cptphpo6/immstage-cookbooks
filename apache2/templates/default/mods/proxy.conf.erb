@@ -6,10 +6,10 @@
         # ("Full" adds the server version; "Block" removes all outgoing Via: headers)
         # Set to one of: Off | On | Full | Block
         <Location /img/>
-            ProxyPass <%= node[:server][:img_url] %>/
+            ProxyPass <%= node[:apache][:img_url] %>/
         </Location>
         <Location /sound/>
-            ProxyPass <%= node[:server][:sound_url] %>/
+            ProxyPass <%= node[:apache][:sound_url] %>/
         </Location>
 
 </IfModule>
